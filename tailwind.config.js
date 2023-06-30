@@ -20,6 +20,10 @@ module.exports = {
         'darkgrayishblue': '#323a49',
         'darkblue': '#1f2632'
       },
+
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif'],
+      }
     },
   },
   plugins: [],

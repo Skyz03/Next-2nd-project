@@ -30,7 +30,7 @@ function Home() {
     <div className="bg-darkblue font-manrope text-center h-[100vh] w-full">
       {advice && (
         <div className="flex h-full justify-center items-center">
-          <div className="container w-auto flex flex-col items-center justify-center bg-grayishblue p-4 rounded-lg ">
+          <div className="container w-auto flex flex-col items-center justify-center bg-grayishblue p-8 rounded-lg ">
             <p className="text-neongreen text-[9px] tracking-[0.15rem]">
               ADIVCE # {advice.slip.id}
             </p>
@@ -43,7 +43,7 @@ function Home() {
               alt="me"
               width="100"
               height="64"
-              style={{ width: "100%" }}
+              style={{ width: "100%", maxWidth: "700px" }}
             />
           </div>
         </div>
