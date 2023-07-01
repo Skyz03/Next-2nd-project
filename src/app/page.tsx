@@ -37,11 +37,11 @@ function Home() {
           // This is the body elements start
           <div className="flex h-full justify-center items-center flex-col">
             {/* This is the card start  */}
-            <div className="container w-auto flex flex-col items-center justify-center bg-grayishblue p-8 rounded-lg ">
+            <div className="container  w-auto flex flex-col items-center justify-center bg-darkgrayishblue p-8 rounded-lg ">
               <p className="text-neongreen text-[9px] tracking-[0.15rem]">
                 ADIVCE # {advice.slip.id}
               </p>
-              <p className="text-white text-xl mt-4 text font-semibold tracking-wide">
+              <p className="text-lightcyan text-xl mt-4 text font-semibold tracking-wide">
                 &quot;{advice.slip.advice}&quot;
               </p>
               <Image
@@ -54,14 +54,16 @@ function Home() {
               />
             </div>
             {/* This is the card end  */}
-            <div className="">
+            <div
+              onClick={handleButtonClick}
+              className="hover:cursor-pointer bg-neongreen rounded-full flex justify-center items-center p-6 -mt-4"
+            >
               <Image
-                className=""
+                className="invert"
                 src="/icon-dice.svg"
                 alt="me"
-                width="100"
-                height="10"
-                onClick={handleButtonClick}
+                width="30"
+                height="15"
               />
             </div>
           </div>
