@@ -11,6 +11,7 @@ interface AdviceSlip {
 
 function Home() {
   const [advice, setAdvice] = useState<AdviceSlip | null>(null);
+  const [backgroundColor, setBackgroundColor] = useState("bg-darkgrayishblue");
 
   useEffect(() => {
     fetchData();
@@ -21,6 +22,7 @@ function Home() {
       const response = await fetch("https://api.adviceslip.com/advice");
       const data: AdviceSlip = await response.json();
       setAdvice(data);
+      setBackgroundColor(getRandomBackgroundColor());
     } catch (error) {
       console.error("Error fetching advice:", error);
     }
@@ -30,6 +32,17 @@ function Home() {
     fetchData();
   };
 
+  const getRandomBackgroundColor = () => {
+    const colors = [
+      "bg-[#0E2954]",
+      "bg-[#1F6E8C]",
+      "bg-[#2E8A99]",
+      "bg-[#E1AEFF]",
+    ];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  };
+
   return (
     <>
       <div className="bg-darkblue font-manrope text-center h-[100vh] w-full">
@@ -37,7 +50,9 @@ function Home() {
           // This is the body elements start
           <div className="flex h-full justify-center items-center flex-col">
             {/* This is the card start  */}
-            <div className="container  w-auto flex flex-col items-center justify-center bg-darkgrayishblue p-8 rounded-lg ">
+            <div
+              className={`container  w-auto flex flex-col items-center justify-center ${backgroundColor} p-8 rounded-lg `}
+            >
               <p className="text-neongreen text-[9px] tracking-[0.15rem]">
                 ADIVCE # {advice.slip.id}
               </p>
@@ -56,7 +71,7 @@ function Home() {
             {/* This is the card end  */}
             <div
               onClick={handleButtonClick}
-              className="hover:cursor-pointer bg-neongreen rounded-full flex justify-center items-center p-6 -mt-4"
+              className="hover:cursor-pointer hover:animate-spin  bg-neongreen rounded-full flex justify-center items-center p-6 -mt-4"
             >
               <Image
                 className="invert"
