@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Advice Page
 
-## Getting Started
+This project is a simple Next.js application that fetches advice from an API and displays it on a web page. The page has a button that allows you to fetch new advice from the API and dynamically changes the background color with each button click.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Fetches advice from the API and displays it on the page.
+- Changes the background color with each button click.
+- Built with Next.js and Tailwind CSS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## API
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application uses the [Advice Slip API](https://api.adviceslip.com/advice) to fetch random advice. The API provides random advice slips or allows you to retrieve specific advice by ID.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Endpoint: `https://api.adviceslip.com/advice`
+  - Makes a GET request to retrieve a random advice slip.
+- Endpoint: `https://api.adviceslip.com/advice/{slip_id}`
+  - Makes a GET request to retrieve a specific advice slip by ID.
 
-## Learn More
+## Color-Changing Background
 
-To learn more about Next.js, take a look at the following resources:
+The application features a color-changing background on each button click. When the button is clicked, a new background color is generated from a predefined set of colors using Tailwind CSS classes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository.
+2. Install the dependencies by running `npm install`.
+3. Start the development server with `npm run dev`.
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Open the application in your browser.
+2. Click the "Get New Advice" button to fetch new advice and see the background color change.
+3. Repeat step 2 to fetch more advice and experience different background colors.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies Used
+
+- Next.js: A React framework for building server-side rendered and static websites.
+- Tailwind CSS: A utility-first CSS framework for building responsive and customizable user interfaces.
+
+Feel free to explore and customize the code according to your needs.
+
