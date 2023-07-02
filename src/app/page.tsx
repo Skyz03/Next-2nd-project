@@ -61,7 +61,7 @@ function Home() {
               </p>
               <Image
                 className="mt-6"
-                src="/pattern-divider-desktop.svg"
+                src="https://res.cloudinary.com/dflzmbghp/image/upload/v1688275594/pattern-divider-desktop_pcgfmj.svg"
                 alt="me"
                 width="100"
                 height="64"
@@ -75,7 +75,7 @@ function Home() {
             >
               <Image
                 className="invert"
-                src="/icon-dice.svg"
+                src="https://res.cloudinary.com/dflzmbghp/image/upload/v1688275594/icon-dice_nbeprq.svg"
                 alt="me"
                 width="30"
                 height="15"
